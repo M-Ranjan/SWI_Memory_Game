@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-size: cover;
+}
+
+body {
+  font-family: 'Pixelify Sans', sans-serif;
+  background-image: url('./assets/3327.jpg');
+  text-align: center;
+  padding: 0;
+  height: 100%;
+  background-color: grey;
+}
+
+.wrapper {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.card {
+  background-color: #ffebcd;
+  border: 2px solid #d2691e;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #8b0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  transform-origin: center center;
+}
+
+.card.matched {
+  background-color: #98fb98;
+  color: #006400;
+  cursor: default;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #ff4500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #dc143c;
+}
+
+button.hide {
+  display: none;
+}
+
+#stop {
+  background-color: #d33f11;
+}
+
+#stop:hover {
+  background-color: #c9302c;
+}
+
+#start {
+  font-size: 1.2rem;
+  color: white;
+  background-color: #4caf50;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#start:hover {
+  background-color: #45a049;
+}
+
+#moves-count, #time {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+#result {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #006400;
+  margin-top: 20px;
+}
+
+.controls-container {
+  margin-top: 20px;
+}
+
+.controls-container p {
+  font-size: 1.5rem;
+  color: #ff4500;
+}
+
+@media screen and (max-width: 600px) {
+  .game-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    height: 80px;
+    font-size: 1.5rem;
+  }
+
+  #start, #stop {
+    font-size: 1rem;
+  }
+}
